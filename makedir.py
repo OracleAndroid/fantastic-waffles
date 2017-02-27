@@ -12,9 +12,10 @@ pathin = input();
 if not os.path.exists(pathin):
     print("Directory not found! Create Directory? Yes/No:")
     nopath = input();
-     if input yes = os.mkdir(pathin)
-    no =
-        break
+if nopath ("Yes"):
+    os.mkdir(pathin)
+    [else
+    quit()]
 if os.path.exists():
     os.chdir("Changed to:", pathin)
 

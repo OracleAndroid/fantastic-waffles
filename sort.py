@@ -10,10 +10,7 @@ input ("Press any key to sort.")
 for image_file in glob.glob("*.*g"):
     file, ext = os.path.splitext(image_file)
     im = Image.open(image_file)
-    width = im.width()
-    height = im.height()
-    print ("", im.width, im.height)
-    src = os.getcwd
-#Match Width and Height, then move to corresponding folder.
-    if width("1080"):
-        shutil.move(src,"1080P")
+    print ("", im.size)
+    src = os.getcwd()
+    if im.size == [1920, 1080]: #Match Width and Height, then move to corresponding folder.
+        shutil.copy((image_file),src,"1080P")
