@@ -9,23 +9,19 @@ print ("Current directory:", cpath);
 #get path from user
 print ("Please input the path to folder:")
 pathin = input();
-if not os.path.exists(pathin):
-    print("Directory not found! Create Directory? Yes(1) or No(2):")
-nopath = input()
-checker = bool(nopath)
-if nopath == (1):
-    checker = True
-elif nopath == (2):
-    checker = False
-while False:
-    quit()
-while True:
-    os.mkdir(pathin)
 if os.path.exists(pathin):
     os.chdir(pathin)
     print("Changed to path:", pathin)
+if not os.path.exists(pathin):
+    print("Directory not found! Create Directory? Yes or No:")
+usrin = 1
+nopath = input()
+if usrin == 1:
+    os.mkdir(pathin)
+    os.chdir(pathin)
 else:
     quit()
+
 #Print current path
 npath = os.getcwd()
 inpath = os.listdir()
