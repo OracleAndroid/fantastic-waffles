@@ -13,10 +13,10 @@ if os.path.exists(pathin):
     os.chdir(pathin)
     print("Changed to path:", pathin)
 if not os.path.exists(pathin):
-    print("Directory not found! Create Directory? Yes or No:")
-usrin = 1
+    print("Directory not found! Create Directory? Yes(1) or No(2):")
 nopath = input()
-if usrin == 1:
+usrin = "1"
+if nopath == usrin:
     os.mkdir(pathin)
     os.chdir(pathin)
 else:
